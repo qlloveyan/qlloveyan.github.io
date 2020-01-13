@@ -11,8 +11,8 @@
 
 #### 1.3 pytest
 - 第三方框架，测试丰富程度和易用程度优于unittest
-- 示例
-```
+- 示例  
+```python
 def inc(x):
     return x +1
  
@@ -21,8 +21,8 @@ def test_answer():
 ```
 
 ### 2. unittest使用
-- 示例
-```
+- 示例  
+```python
 class SimpleTest(unittest.TestCase):
 	
 	def setUp(self):
@@ -44,8 +44,8 @@ if __name__ == "__main__":
 ### 3. unittest + 态势
 #### 3.1 公共方法使用测试
 - 需求：在国产化改造中，对达梦python兼容使用做全局测试
-- 示例：
-```
+- 示例：  
+```python
 class DMUtilTest(unittest.TestCase):
 
     def setUp(self):
@@ -89,8 +89,8 @@ if __name__ == "__main__":
 	- csrf_protect：post请求中，需要将session中的csrf_token、csrf_timeout做验证
 	- permission_required：需要验证用户是否有当前接口的权限
  - session操作接口文档：[测试 Flask 应用 — Flask 0.10.1 文档](http://docs.jinkan.org/docs/flask/testing.html)
-- 示例
-```
+- 示例  
+```python
 class ViewTest(unittest.TestCase):
 
     def setUp(self):
@@ -117,8 +117,8 @@ if __name__ == "__main__":
     suite.addTest(ViewTest('test_company_list'))
     unittest.TextTestRunner().run(suite)
 ```
-- 公共方法层面
-```
+- 公共方法层面  
+```python
 CSRF_TOKEN = "589c7ed15a4d63745501f27bc10723e8"
 
 def init_test_app():
